@@ -1,32 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Shop Menu</title>
-  </head>
-  <body>
-    <div class="header">
-      <h1>Bean & Brew Cafe</h1>
-      <p>Discover our selection of drinks and snacks.</p>
-    </div>
-    <div>
-      <img
-        class="coffee-image"
-        src="https://mimo.app/i/gray-coffee-maker.png"
-      />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew Cafe Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cafe-header">
+        <h1>Bean & Brew Cafe</h1>
+        <p>Discover our selection of drinks and snacks.</p>
+    </header>
 
-      <ul class="menu-list">
-        <li class="menu-item">Esspreso</li>
-        <li class="menu-item">Cappuccino</li>
-        <li class="menu-item">Latte</li>
-        <li class="menu-item">Croissant</li>
-        <li class="menu-item">Blueberry Muffin</li>
-        <li class="menu-item">Milk Tea</li>
-        <li class="menu-item">Tiramisu</li>
-        <li class="menu-item">Princess Cake</li>
-      </ul>
-    </div>
-  </body>
+    <main class="menu-container">
+        <div class="menu-content">
+            <section class="menu-section">
+                <h2>Hot Drinks</h2>
+                <ul class="menu-list">
+                    <li class="menu-item">Espresso</li>
+                    <li class="menu-item">Cappuccino</li>
+                    <li class="menu-item">Latte</li>
+                    <li class="menu-item">Milk Tea</li>
+                </ul>
+            </section>
+
+            <section class="menu-section">
+                <h2>Pastries & Desserts</h2>
+                <ul class="menu-list">
+                    <li class="menu-item">Croissant</li>
+                    <li class="menu-item">Blueberry Muffin</li>
+                    <li class="menu-item">Tiramisu</li>
+                    <li class="menu-item">Princess Cake</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="image-wrapper">
+            <img src="https://mimo.app/i/gray-coffee-maker.png" alt="A gray coffee maker" class="coffee-image">
+        </div>
+    </main>
+</body>
 </html>
