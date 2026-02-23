@@ -1,31 +1,110 @@
-.header {
+/* Base styles */
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    margin: 0;
+    background: #faf7f2;
+    line-height: 1.6;
+}
+
+/* Header */
+.cafe-header {
     text-align: center;
-    color: #5A2D0C ;
-    background-color: #FFEBCD ;
-    padding: 20px;
+    color: #5a2d0c;
+    background-color: #ffe4cd; /* slightly softer than #FFEBCD */
+    padding: 2rem 1rem;
     font-weight: bold;
+    border-bottom: 2px solid #d2b48c;
+}
 
-  }
-  .menu-list {
-    background-color: #E6E6FA ;
-    padding: 20px;
-  }
+.cafe-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
 
-  .menu-item {
-    display: block;
-    font-size: 18px;
+.cafe-header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
 
-  }
+/* Main layout */
+.menu-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 
-  body {
-    font-family: 'Helvetica', sans-serif;
-  }
+.menu-content {
+    flex: 2;
+    min-width: 300px;
+}
 
-  .coffee-image {
-    margin-right: 20px;
-    margin-top: 15px;
-    width: 100px;
-    position: relative ;
-    z-index: 2;
-    float: right;
-  }
+.image-wrapper {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.coffee-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Menu sections */
+.menu-section {
+    margin-bottom: 2rem;
+}
+
+.menu-section h2 {
+    color: #5a2d0c;
+    border-bottom: 2px dashed #d2b48c;
+    padding-bottom: 0.25rem;
+    font-size: 1.8rem;
+    margin: 0 0 1rem 0;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #e6e6fa;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.menu-item {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #dcd0ff;
+    transition: background 0.2s;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background-color: #dcd0ff;
+    cursor: default;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .menu-container {
+        flex-direction: column;
+    }
+    .image-wrapper {
+        order: -1; /* image on top for mobile */
+        margin-bottom: 1rem;
+    }
+    .cafe-header h1 {
+        font-size: 2rem;
+    }
+}
